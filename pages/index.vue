@@ -200,15 +200,11 @@ const { data: product, pending, error } =  await useFetch('https://fakestoreapi.
 onMounted(() => {
     const fcs = new Swiper('.fcs', {
         direction: 'horizontal',
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
         breakpoints: {
 
             // when window width is >= 640px
-            462: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
 
             768: {
                 slidesPerView: 3,
