@@ -36,7 +36,7 @@ const {
 onMounted(() => {
   const swipper = new Swiper(".product-swipe", {
     direction: "horizontal",
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 10,
     breakpoints: {
       468: {
