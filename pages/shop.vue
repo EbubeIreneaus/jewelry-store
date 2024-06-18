@@ -2,13 +2,13 @@
   <div>
     <Breadcrumb :paths="['Home', 'Shop']" />
 
-    <div class="flex flex-col md:px-10 gap-y-10 px-5 my-10 lg:flex-row">
-      <div class="lg:max-w-[25%] w-full order-2 lg:!order-1">
+    <div class="flex flex-col md:px-10 gap-y-10 sm:px-5 px-1.5 my-10 lg:flex-row">
+      <div class="lg:max-w-[25%] w-full order-2 lg:!order-1 px-4 md:px-0">
         <shop-leftbar></shop-leftbar>
       </div>
 
       <!-- main section -->
-      <div class="w-full py-3 px-5 font-sans lg:order-2 ">
+      <div class="w-full py-3  font-sans lg:order-2 ">
         <!-- top bar -->
         <div
           class="flex flex-col gap-y-5 md:flex-row items-center justify-between text-black/50"
@@ -85,7 +85,7 @@
 
         <div>
           <div
-            class="grid gap-7 py-10"
+            class="grid gap-3 py-10"
             :class="{
               '!grid-cols-3': grid_display == 3,
               '!grid-cols-4': grid_display == 4,
@@ -164,13 +164,13 @@ const {
 
 const resizeWin = () => {
   if (window.innerWidth < 462) {
-    grid_display.value = 1;
-  } else if (window.innerWidth <= 646) {
     grid_display.value = 2;
-  } else if (window.innerWidth <= 992) {
+  } else if (window.innerWidth <= 646) {
     grid_display.value = 3;
-  }else{
+  } else if (window.innerWidth <= 992) {
     grid_display.value = 4;
+  }else{
+    grid_display.value = 5;
   }
 };
 

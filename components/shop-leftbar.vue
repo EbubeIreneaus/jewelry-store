@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full border bg-slate-950 ">
+    <div class="w-full border bg-slate-950">
         <div class="px-5 py-7">
             <div class="">
                 <h2 class="text-2xl font-bold text-orange-400">CATEGORIES</h2>
@@ -28,71 +28,6 @@
                 <nuxt-link to="/shop">
                     <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
                         <span>Body parts</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Camera &amp; Camcoder</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Car parts</span> <span>(15)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Cookies &amp; Crackers</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Interior</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>shop</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Smartwatch</span> <span>(31)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Suspension</span> <span>(18)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Tools &amp; Accessories</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Turbo System</span> <span>(22)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>TV &amp; Audio</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Oil &amp; Fluid</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>Exterior</span> <span>(12)</span>
-                    </li>
-                </nuxt-link>
-                <nuxt-link to="/shop">
-                    <li class="flex mb-3 hover:text-orange-500 justify-between  text-orange-200">
-                        <span>BreakFast</span> <span>(0)</span>
                     </li>
                 </nuxt-link>
             </ul>
