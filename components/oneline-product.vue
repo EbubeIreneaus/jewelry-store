@@ -6,11 +6,11 @@
     </div>
     <v-btn
       icon="mdi-less-than"
-      class="swiper-button-prev ms-5 border p-3 !bg-slate-900 !invisible group-hover/container:!visible"
+      class="swiper-button-prev ms-5 border p-3 !hidden lg:!block  !bg-slate-900 !invisible group-hover/container:!visible"
     ></v-btn>
     <v-btn
       icon="mdi-greater-than"
-      class="swiper-button-next me-5 px-7 p-3 !bg-slate-900 !invisible group-hover/container:!visible"
+      class="swiper-button-next me-5 px-7 p-3 !hidden lg:!block !bg-slate-900 !invisible group-hover/container:!visible"
     ></v-btn>
   </div>
 </template>
