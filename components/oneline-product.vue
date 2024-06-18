@@ -1,6 +1,6 @@
 <template>
   <div class="swiper-container group/container product-swipe relative">
-    <div class="swiper-wrapper px-5">
+    <div class="swiper-wrapper md:px-5">
       <!-- single product -->
      <product-card v-for="product in products" :product="product" :key="product.id"></product-card>
     </div>
