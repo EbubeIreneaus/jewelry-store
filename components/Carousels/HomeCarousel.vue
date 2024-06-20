@@ -9,7 +9,7 @@ const currency = useCurrency()
       <v-btn
         icon="mdi-arrow-left"
         variant="tonal"
-        class="!bg-slate-950 !text-orange-400 !hidden md:!block"
+        class="!bg-slate-950 !text-orange-300 !hidden md:!block"
         @click="props.onClick"
       ></v-btn>
     </template>
@@ -17,7 +17,7 @@ const currency = useCurrency()
       <v-btn
       icon="mdi-arrow-right"
         variant="tonal"
-        class="!bg-slate-950 !text-orange-400 !hidden md:!block"
+        class="!bg-slate-950 !text-orange-300 !hidden md:!block"
         @click="props.onClick"
       ></v-btn>
     </template>
