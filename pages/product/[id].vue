@@ -124,7 +124,7 @@
       <v-tab value="reviews">Reviews</v-tab>
     </v-tabs>
 
-    <v-tabs-window v-model="comp" class="p-7">
+    <v-tabs-window v-model="comp" class="md:!p-7 !px-2">
         <v-tabs-window-item value="desc">
           <lazy-product-desc :product="product" />
         </v-tabs-window-item>
@@ -218,17 +218,17 @@ onMounted(() => {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 2,
-    spaceBetween: 30,
+    spaceBetween: 10,
     loop: true,
     breakpoints: {
       // when window width is >= 468px
       468: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
       992: {
         slidesPerView: 4,
