@@ -6,6 +6,7 @@ const currency = useCurrency()
 <template>
   <v-carousel hide-delimiters show-arrows="hover" cycle>
     <v-carousel-item src="~/assets/images/bg/bg-1.jpg" cover>
+      <div  class="absolute z-50 flex justify-center items-center w-full h-full top-0 right-0 bg-black/50"></div>
       <div
         class="absolute z-50 flex justify-center items-center w-full h-full top-0 right-0"
       >
@@ -31,8 +32,10 @@ const currency = useCurrency()
     </v-carousel-item>
 
     <v-carousel-item src="~/assets/images/bg/bg-2.jpg" cover>
+      <div  class="absolute z-50 flex justify-center items-center w-full h-full top-0 right-0 bg-black/60"></div>
+
       <div
-        class="absolute z-30 flex justify-center items-center w-full h-full top-0 right-0"
+        class="absolute z-50 flex justify-center items-center w-full h-full top-0 right-0"
       >
         <div class="w-[100%] ms-5 md:w-[80%] xl:w-[50%]">
           <h2
@@ -56,8 +59,9 @@ const currency = useCurrency()
     </v-carousel-item>
 
     <v-carousel-item src="~/assets/images/bg/2-5.jpg" cover>
+      <div  class="absolute z-50 flex justify-center items-center w-full h-full top-0 right-0 bg-black/60"></div>
       <div
-        class="absolute z-30 flex justify-center items-center w-full h-full top-0 right-0"
+        class="absolute z-50 flex justify-center items-center w-full h-full top-0 right-0"
       >
         <div class="w-[100%] ms-5 md:w-[80%] xl:w-[50%]">
           <h2
