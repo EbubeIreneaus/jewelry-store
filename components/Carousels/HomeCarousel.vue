@@ -5,6 +5,23 @@ const currency = useCurrency()
 
 <template>
   <v-carousel hide-delimiters show-arrows="hover" cycle>
+    <template v-slot:prev="{ props }">
+      <v-btn
+        icon="mdi-arrow-left"
+        variant="tonal"
+        class="!bg-slate-950 !text-orange-400 !hidden md:!block"
+        @click="props.onClick"
+      ></v-btn>
+    </template>
+    <template v-slot:next="{ props }">
+      <v-btn
+      icon="mdi-arrow-right"
+        variant="tonal"
+        class="!bg-slate-950 !text-orange-400 !hidden md:!block"
+        @click="props.onClick"
+      ></v-btn>
+    </template>
+
     <v-carousel-item src="~/assets/images/bg/bg-1.jpg" cover>
       <div  class="absolute z-50 flex justify-center items-center w-full h-full top-0 right-0 bg-black/50"></div>
       <div
