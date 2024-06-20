@@ -115,33 +115,28 @@
     </v-sheet>
 
     <div>
-      <div
-        class="w-full py-10 flex items-center gap-5 font-bold bg-slate-950 text-white/60 px-10"
-      >
-        <span
-          class="cursor-pointer"
-          @click="comp_index = 0"
-          :class="{ 'text-orange-500': comp_index == 0 }"
-          >description</span
-        >
-        <i class="fa fa-arrow-right"></i>
-        <span
-          class="cursor-pointer"
-          @click="comp_index = 1"
-          :class="{ 'text-orange-500': comp_index == 1 }"
-          >specification</span
-        >
-        <i class="fa fa-arrow-right"></i>
-        <span
-          class="cursor-pointer"
-          @click="comp_index = 2"
-          :class="{ 'text-orange-500': comp_index == 2 }"
-          >reviews</span
-        >
-      </div>
-      <div class="px-5 py-7 border my-7">
-        <component :is="comp[comp_index]" :product="product"></component>
-      </div>
+      <v-tabs
+      v-model="comp"
+      class="!bg-slate-950"
+    >
+      <v-tab value="desc">Description</v-tab>
+      <v-tab value="specification">Specification</v-tab>
+      <v-tab value="reviews">Reviews</v-tab>
+    </v-tabs>
+
+    <v-tabs-window v-model="comp" class="p-7">
+        <v-tabs-window-item value="desc">
+          <lazy-product-desc :product="product" />
+        </v-tabs-window-item>
+
+        <v-tabs-window-item value="specification">
+         <lazy-product-specification />
+        </v-tabs-window-item>
+
+        <v-tabs-window-item value="reviews" :product="product">
+          <lazy-product-reviews />
+        </v-tabs-window-item>
+      </v-tabs-window>
     </div>
 
     <!-- Feature category -->
@@ -172,8 +167,8 @@ import { LazyProductReviews } from "#components";
 const { id } = useRoute().params;
 const wishlist = useWishlist();
 
-const comp = [LazyProductDesc, LazyProductSpecification, LazyProductReviews];
-const comp_index = ref(0);
+// const comp = [LazyProductDesc, LazyProductSpecification, LazyProductReviews];
+const comp = ref('desc');
 
 const {
   data: product,
@@ -222,7 +217,7 @@ onMounted(() => {
   const category_slide = new Swiper(".category", {
     // Optional parameters
     direction: "horizontal",
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
     breakpoints: {

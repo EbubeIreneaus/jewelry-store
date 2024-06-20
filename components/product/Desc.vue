@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-black/60 font-semibold">
+        <p class="text-orange-400 font-semibold">
         {{ product.description }}
         </p>
     </div>
