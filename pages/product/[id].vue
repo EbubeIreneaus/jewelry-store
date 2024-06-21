@@ -92,45 +92,40 @@
           >
             Add To Cart
           </v-btn>
-          <v-btn icon="mdi-heart" variant="tonal"  @click="addToWishlist($event)"></v-btn>
-         </div>
-        <div class="flex gap-3">
-          <button
-            class="fa-brands fa-facebook-f border py-3 px-4 rounded-full bg-blue-500"
-          ></button>
-          <button
-            class="fa-brands fa-twitter border py-3 px-4 rounded-full bg-blue-300"
-          ></button>
-          <button
-            class="fa-brands fa-instagram border py-3 px-4 rounded-full bg-purple-500"
-          ></button>
-          <button
-            class="fa-brands fa-youtube border py-3 px-4 rounded-full bg-red-500"
-          ></button>
-          <button
-            class="fa-brands fa-whatsapp border py-3 px-4 rounded-full bg-green-500"
-          ></button>
+          <v-btn
+            icon="mdi-heart"
+            variant="tonal"
+            @click="addToWishlist($event)"
+          ></v-btn>
+        </div>
+        <div class="flex items-center gap-3">
+          <p>Share Product</p>
+          <v-btn icon="mdi-facebook" variant="tonal" size="small"
+          ></v-btn>
+          <v-btn icon="mdi-instagram" variant="tonal" size="small"
+          ></v-btn>
+          <v-btn icon="mdi-twitter" variant="tonal" size="small"
+          ></v-btn>
+          <v-btn icon="mdi-whatsapp" variant="tonal" size="small"
+          ></v-btn>
         </div>
       </div>
     </v-sheet>
 
     <div>
-      <v-tabs
-      v-model="comp"
-      class="!bg-slate-950"
-    >
-      <v-tab value="desc">Description</v-tab>
-      <v-tab value="specification">Specification</v-tab>
-      <v-tab value="reviews">Reviews</v-tab>
-    </v-tabs>
+      <v-tabs v-model="comp" class="!bg-slate-950">
+        <v-tab value="desc">Description</v-tab>
+        <v-tab value="specification">Specification</v-tab>
+        <v-tab value="reviews">Reviews</v-tab>
+      </v-tabs>
 
-    <v-tabs-window v-model="comp" class="md:!p-7 !px-2">
+      <v-tabs-window v-model="comp" class="md:!p-7 !px-2">
         <v-tabs-window-item value="desc">
           <lazy-product-desc :product="product" />
         </v-tabs-window-item>
 
         <v-tabs-window-item value="specification">
-         <lazy-product-specification />
+          <lazy-product-specification />
         </v-tabs-window-item>
 
         <v-tabs-window-item value="reviews" :product="product">
@@ -144,10 +139,13 @@
       <h2 class="text-3xl font-extrabold text-center my-7 text-white/60">
         Feature Category
       </h2>
-      <div class="swiper-container category">
-        <div class="swiper-wrapper">
-          <product-card v-for="product in cat" :product="product" :key="product.id"></product-card>
-        </div>
+      <div class="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-x-4 gap-y-7 py-10">
+        <!-- single products -->
+        <product-card
+          v-for="product in cat"
+          :product="product"
+          :key="product.id"
+        />
       </div>
     </div>
   </div>
@@ -168,7 +166,7 @@ const { id } = useRoute().params;
 const wishlist = useWishlist();
 
 // const comp = [LazyProductDesc, LazyProductSpecification, LazyProductReviews];
-const comp = ref('desc');
+const comp = ref("desc");
 
 const {
   data: product,
@@ -237,7 +235,7 @@ onMounted(() => {
       1080: {
         slidesPerView: 5,
         spaceBetween: 30,
-      }
+      },
     },
     navigation: {
       nextEl: ".swiper-button-next",

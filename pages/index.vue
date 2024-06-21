@@ -133,7 +133,7 @@
                 <p class=" text-3xl font-bold ">New Arrivals Products</p>
             </div>
             <div class="mt-10">
-                <oneline-product></oneline-product>
+                <product-oneline-product></product-oneline-product>
             </div>
         </div>
         <!-- banner large -->

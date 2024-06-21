@@ -85,7 +85,7 @@
 
         <div>
           <div
-            class="grid gap-3 py-10"
+            class="grid gap-x-4 gap-y-7 py-10"
             :class="{
               '!grid-cols-3': grid_display == 3,
               '!grid-cols-4': grid_display == 4,
@@ -94,7 +94,7 @@
             }"
           >
             <!-- single products -->
-            <product-card v-for="product in products" :product="product" :key="product.id"></product-card>
+            <product-card v-for="product in products" :product="product" :key="product.id" />
           </div>
         </div>
 
