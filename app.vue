@@ -1,3 +1,10 @@
+<script setup lang="ts">
+
+    useSeoMeta({
+        ogImage: '~/assets/images/breadcrumb/1.jpg'
+    })
+</script>
+
 <template>
    <v-app>
     <NuxtLayout>

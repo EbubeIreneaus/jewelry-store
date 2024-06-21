@@ -40,6 +40,12 @@ export default defineNuxtConfig({
   },
 
   app:{
+    head:{
+      title: 'Okis Jewelry online store',
+      meta: [
+        {name: 'description', content: 'Okis jewelry online store, shop from the comfort of your home!!'},
+      ],
+    },
     pageTransition:{
       name: 'page', mode: 'out-in'
     },

@@ -4,12 +4,12 @@ const currency = useCurrency()
 </script>
 
 <template>
-  <v-carousel hide-delimiters show-arrows="hover" cycle>
+  <v-carousel hide-delimiters show-arrows="hover" cycle >
     <template v-slot:prev="{ props }">
       <v-btn
         icon="mdi-arrow-left"
         variant="tonal"
-        class="!bg-slate-950 !text-orange-300 !hidden md:!block"
+        class="!bg-slate-950 !text-orange-300 "
         @click="props.onClick"
       ></v-btn>
     </template>
@@ -17,7 +17,7 @@ const currency = useCurrency()
       <v-btn
       icon="mdi-arrow-right"
         variant="tonal"
-        class="!bg-slate-950 !text-orange-300 !hidden md:!block"
+        class="!bg-slate-950 !text-orange-300"
         @click="props.onClick"
       ></v-btn>
     </template>
