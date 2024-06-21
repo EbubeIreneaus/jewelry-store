@@ -39,7 +39,7 @@
         </v-sheet>
 
         <!-- Featured Categories -->
-        <div>
+        <!-- <div>
             <div class="text-center">
                 <p class="text-white/50 font-semibold text-sm">Top Featured Collections</p>
                 <p class=" text-3xl font-bold">Featured Categories</p>
@@ -78,10 +78,10 @@
                 <v-btn icon="mdi-less-than" class="swiper-button-prev border p-3 bg-slate-200 !invisible group-hover:!visible"></v-btn>
                 <v-btn icon="mdi-greater-than" class="swiper-button-next p-3 bg-slate-200 !invisible group-hover:!visible"></v-btn>
             </div>
-        </div>
+        </div> -->
 
         <!-- BANNER -->
-        <div class="grid lg:grid-cols-2 gap-5 w-full max-w-[95%] mx-auto my-24">
+        <div class="grid lg:grid-cols-2 gap-5 w-full max-w-[95%] mx-auto my-16">
             <div class="h-[400px] w-full relative">
                 <img src="~/assets/images/banner/1-1.jpg" alt="" class="w-full h-full object-cover">
                 <div class="flex w-full h-full items-center absolute top-0 md:left-16 left-5">

@@ -12,12 +12,12 @@ const sidebar = reactive({
 });
 
 const navLinks = [
-  { title: "Home", href: "/", icon: "", subLinks: [] },
-  { title: "Shop", href: "/shop", icon: "", subLinks: [] },
-  { title: "Specials", href: "/special", icon: "", sublinks: [] },
-  { title: "About", href: "/about", icon: "", sublinks: [] },
-  { title: "Contact", href: "/contact", icon: "", sublinks: [] },
-  { title: "Blog", href: "/blog", icon: "", sublinks: [] },
+  { title: "Home", href: "/", icon: "mdi-home", subLinks: [] },
+  { title: "Shop", href: "/shop", icon: "mdi-store", subLinks: [] },
+  { title: "wishlist", href: "/wishlist", icon: "mdi-hand-heart", sublinks: [] },
+  { title: "About", href: "/about", icon: "mdi-information", sublinks: [] },
+  { title: "Contact", href: "/contact", icon: "mdi-account-box", sublinks: [] },
+  { title: "Blog", href: "/blog", icon: "mdi-post", sublinks: [] },
 ];
 
 let currencies = [{ title: "NGN" }, { title: "USD" }];
@@ -287,312 +287,26 @@ onMounted(() => {
       :class="{ '!right-0 opacity-100': sidebar.memu }"
     >
       <div class="flex items-center justify-end p-4">
-      <v-btn icon="mdi-close" variant="tonal" @click="sidebar.memu = false"></v-btn>
+        <v-btn
+          icon="mdi-close"
+          variant="tonal"
+          @click="sidebar.memu = false"
+        ></v-btn>
       </div>
       <div class="mt-5 me-7">
-        <ul>
-          <nuxt-link to="/">
-            <li class="py-2.5 px-5 flex items-center justify-between">
-              <span>Home</span>
-            </li>
+        <v-list class="!bg-inherit !text-inherit" lines="two">
+          <nuxt-link
+            :to="link.href"
+            v-for="link in navLinks"
+            :key="link.title"
+            @click="sidebar.memu = false"
+          >
+            <v-list-item
+              :title="link.title"
+              :prepend-icon="link.icon"
+            ></v-list-item>
           </nuxt-link>
-          <div>
-            <li
-              id="shop"
-              class="py-2.5 px-5 flex items-center justify-between drop-down-btn"
-            >
-              <nuxt-link to="/shop"><span>Shop</span></nuxt-link>
-              <i class="fa fa-angle-right"></i>
-            </li>
-            <div class="dropdown-cont">
-              <ul class="px-1">
-                <!-- CATEGORY ONE -->
-                <div>
-                  <li
-                    id=""
-                    class="py-2.5 px-5 flex items-center justify-between drop-down-btn"
-                  >
-                    <nuxt-link to=""
-                      ><span class="capitalize text-md"
-                        >Category One</span
-                      ></nuxt-link
-                    >
-                    <i class="fa fa-angle-right"></i>
-                  </li>
-                  <div class="dropdown-cont">
-                    <ul class="px-3">
-                      <nuxt-link to="/shop">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Game</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="/shop">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Console</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Audio</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Back Ware</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Body Parts</span>
-                        </li>
-                      </nuxt-link>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- CATEGORY TWO -->
-                <div>
-                  <li
-                    id=""
-                    class="py-2.5 px-5 flex items-center justify-between drop-down-btn"
-                  >
-                    <nuxt-link to="/shop"
-                      ><span class="capitalize text-md"
-                        >Category Two</span
-                      ></nuxt-link
-                    >
-                    <i class="fa fa-angle-right"></i>
-                  </li>
-                  <div class="dropdown-cont">
-                    <ul class="px-3">
-                      <nuxt-link to="/shop">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Camera &amp; Camcoder</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="/shop">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Car parts</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Cookies &amp; Crackers</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Interiors</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Brake &amp; Rotors</span>
-                        </li>
-                      </nuxt-link>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- CATEGORY THREE -->
-                <div>
-                  <li
-                    id=""
-                    class="py-2.5 px-5 flex items-center justify-between drop-down-btn"
-                  >
-                    <nuxt-link to=""
-                      ><span class="capitalize text-md"
-                        >Category Three</span
-                      ></nuxt-link
-                    >
-                    <i class="fa fa-angle-right"></i>
-                  </li>
-                  <div class="dropdown-cont">
-                    <ul class="px-3">
-                      <nuxt-link to="/shop">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Lightening</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>performance</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Machines</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Jewelries</span>
-                        </li>
-                      </nuxt-link>
-                      <nuxt-link to="">
-                        <li
-                          class="py-2.5 px-5 flex items-center justify-between"
-                        >
-                          <span>Shoes &amp; Clothes</span>
-                        </li>
-                      </nuxt-link>
-                    </ul>
-                  </div>
-                </div>
-              </ul>
-            </div>
-          </div>
-          <nuxt-link to="">
-            <li class="py-2.5 px-5 flex items-center justify-between">
-              <span>Specials</span>
-            </li>
-          </nuxt-link>
-          <div>
-            <li
-              class="py-2.5 px-5 flex items-center justify-between drop-down-btn"
-            >
-              <nuxt-link to=""><span>Pages</span></nuxt-link>
-              <i class="fa fa-angle-right"></i>
-            </li>
-            <div class="dropdown-cont">
-              <ul class="px-2">
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>My Account</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="/auth/signin">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>Login | Register</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="/wishlist">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>Wishlist</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="/cart">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>Cart</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>Checkout</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>Compare</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>FAQ</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="/error">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>404 Error</span>
-                  </li>
-                </nuxt-link>
-              </ul>
-            </div>
-          </div>
-          <nuxt-link to="">
-            <li class="py-2.5 px-5 flex items-center justify-between">
-              <span>About</span>
-            </li>
-          </nuxt-link>
-          <nuxt-link to="/contact">
-            <li class="py-2.5 px-5 flex items-center justify-between">
-              <span>Contact</span>
-            </li>
-          </nuxt-link>
-          <br />
-          <div>
-            <li
-              class="py-2.5 px-5 flex items-center justify-between drop-down-btn"
-            >
-              <nuxt-link to=""><span>Currency</span></nuxt-link>
-              <i class="fa fa-angle-right"></i>
-            </li>
-            <div class="dropdown-cont">
-              <ul class="px-2">
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>USD</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>NGN</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>Pounds</span>
-                  </li>
-                </nuxt-link>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <li
-              class="py-2.5 px-5 flex items-center justify-between drop-down-btn"
-            >
-              <nuxt-link to=""><span>Language</span></nuxt-link>
-              <i class="fa fa-angle-right"></i>
-            </li>
-            <div class="dropdown-cont">
-              <ul class="px-2">
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>English</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>French</span>
-                  </li>
-                </nuxt-link>
-                <nuxt-link to="">
-                  <li class="py-2.5 px-5 flex items-center justify-between">
-                    <span>Igbo</span>
-                  </li>
-                </nuxt-link>
-              </ul>
-            </div>
-          </div>
-        </ul>
+        </v-list>
       </div>
     </div>
   </v-sheet>
